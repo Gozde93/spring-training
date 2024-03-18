@@ -5,11 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class DellCase extends Case  {
 
-    public DellCase() {
-        super("2208","Dell","240");
+    public DellCase(String model, String manufacturer, String powerSupply, Dimensions dimensions) {
+        super(model, manufacturer, powerSupply, dimensions);
     }
-
-
 
     public void pressPowerButton() {
 
