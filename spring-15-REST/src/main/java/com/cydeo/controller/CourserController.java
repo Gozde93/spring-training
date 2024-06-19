@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/courses")
+@RequestMapping("/courses/api/v1")
 public class CourserController {
 
     private final CourseService courseService;
@@ -48,9 +48,10 @@ public class CourserController {
     }
 
 
-    @DeleteMapping({"id"})
+    @DeleteMapping("{id}")
     public void deleteCourseById(@PathVariable("id") long courseId){
         courseService.deleteCourseById(courseId);
+
     }
 
 
